@@ -34,3 +34,7 @@ $(document).ready(function() {
     }
     $(window).on('scroll load', animateCounter);
 });
+
+document.getElementById('sidebar-toggle').addEventListener('click', function() {
+    document.querySelector('.sidebar').classList.toggle('active');
+});

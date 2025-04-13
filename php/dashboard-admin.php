@@ -65,7 +65,7 @@ $active_page = 'dashboard';
                             </div>
                             <div class="card-body">
                                 <h2>Selamat datang di dashboard admin SMK pesat!</h2>
-                                <p>I love you</p>
+                                <p>Semua informasi penting mengenai data pokok sekolah dapat diakses di sini.</p>
                             </div>
                         </div>
                     </div>
@@ -73,14 +73,7 @@ $active_page = 'dashboard';
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Toggle sidebar on mobile
-        document.getElementById('sidebar-toggle').addEventListener('click', function() {
-            document.querySelector('.sidebar').classList.toggle('active');
-        });
-    </script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

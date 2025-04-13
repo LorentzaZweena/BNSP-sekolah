@@ -29,11 +29,11 @@ $has_data = mysqli_num_rows($query) > 0;
     <div class="d-flex">
         <div class="sidebar bg-white">
             <div class="p-3 border-bottom">
-                <h4>Admin Panel</h4>
+                <h4>Admin SMK pesat</h4>
             </div>
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a href="dashboard.php" class="sidebar-link <?php echo $active_page == 'dashboard' ? 'active' : ''; ?>">
+                    <a href="dashboard-admin.php" class="sidebar-link <?php echo $active_page == 'dashboard' ? 'active' : ''; ?>">
                         <i class="bi bi-speedometer2"></i> Dashboard
                     </a>
                 </li>
@@ -51,7 +51,7 @@ $has_data = mysqli_num_rows($query) > 0;
         </div>
 
         <div class="main-content">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+            <nav class="navbar navbar-expand-lg navbar-light mb-4">
                 <div class="container-fluid">
                     <button class="btn" id="sidebar-toggle">
                         <i class="bi bi-list"></i>
@@ -66,9 +66,9 @@ $has_data = mysqli_num_rows($query) > 0;
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-header d-flex justify-content-between align-items-center">
+                            <div class="card-header d-flex justify-content-between align-items-center bg-primary text-white">
                                 <h5 class="card-title mb-0">Data Table</h5>
-                                <a href="add_data.php" class="btn btn-primary btn-sm">
+                                <a href="add_data.php" class="btn btn-warning btn-sm">
                                     <i class="bi bi-plus"></i> Add New
                                 </a>
                             </div>
