@@ -10,7 +10,7 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container position-relative">
         <a class="navbar-brand" href="#">
           <img src="https://tesis.sekolah-pesat.com/assets/images/logo-smk-pesat.png" alt="Bootstrap" width="80" height="60">
@@ -27,13 +27,13 @@
               <a class="nav-link active fw-500" href="#">Profil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Ekstrakulikuler</a>
+              <a class="nav-link" href="ekskul.html">Ekstrakulikuler</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Galeri</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Fasilitas</a>
+              <a class="nav-link" href="#">Pendaftaran</a>
             </li>
           </ul>
           <div class="ms-auto">
@@ -43,12 +43,9 @@
       </div>
     </nav>
         
-     <br><br><br>
+     <br><br><br><br>
     <div class="container mt-5">
       <div class="row align-items-center hero-section">
-        <div class="col-md-6 hero-image rounded">
-            <img src="./img/kegiatan-parentinh.jpg" alt="image" class="img-fluid" width="90%">
-          </div>
         <div class="col-md-6 hero-content">
           <p class="text-primary fw-medium">TENTANG KAMI</p>
           <h1 class="fs-1 lh-base">Unggul, Mandiri dan Berbudaya.</h1>
@@ -58,147 +55,131 @@
             <button class="btn btn-outline-orange" type="button">Daftar Sekarang</button>
           </div>
         </div>
-      </div>
-    </div>
-
-    <br><br><br>
-    <div class="container mt-5">
-        <div class="container text-right">
-            <div class="row align-items-center">
-              <div class="col">
-                <h1>Pencapaian kami</h1>
-                <p class="lh-base">Pencapaian bukan akhir dari perjalanan, tapi awal dari <br>tantangan yang lebih besar.</p>
-                <div class="progress mt-4" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar" style="width: 25%">Wirausaha</div>
-                  </div>
-                  <div class="progress mt-4" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar" style="width: 50%">Kuliah</div>
-                  </div>
-                  <div class="progress mt-4" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar" style="width: 75%">Bekerja</div>
-                  </div>
-              </div>
-              <div class="col">
-                One of three columns
-              </div>
-            </div>
-          </div>
-    </div>
-
-    <div class="container mt-5">
-      <section class="counter-section text-center">
-        <div class="mt-n5">
-            <div class="row ">
-              <br><br>
-                <div class="col-12 text-center mb-5">
-                  <br><br>
-                    <h2 class="mt-n5">Jumlah guru dan siswa</h2>
-                    <p class="lead ">Statistik terkini</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6 mb-4 ">
-                    <div class="counter-box ">
-                        <div class="counter-value" data-count="1500">0</div>
-                        <div class="counter-title ">Guru</div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4 ">
-                    <div class="counter-box ">
-                        <div class="counter-value " data-count="2000">0</div>
-                        <div class="counter-title ">Siswa</div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="counter-box">
-                        <div class="counter-value" data-count="960">0</div>
-                        <div class="counter-title">Staff</div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="counter-box">
-                        <div class="counter-value" data-count="2">0</div>
-                        <div class="counter-title">Peringkat</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    </div>
-
-    <!-- kegiatan sekolah -->
-    <div class="container mt-5">
-      <!-- <button type="button" class="btn btn-primary">Kegiatan sekolah</button> -->
-      <div class="d-flex flex-row justify-content-between align-items-center mb-3">
-        <div>
-          <h1 class="lh-base mt-3">Bukan sekedar informatika, tapi juga <br>fokus akhlak mulia</h1>
-        </div>
-        <div>
-          <button type="button" class="btn btn-outline-orange">Kegiatan sekolah</button>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row align-items-start">
-          <div class="col">
-            <div class="card" style="width: 25rem;">
-              <img src="./img/image-gallery.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Sertifikat kompetensi 2024 / 2025</h5>
-                <p class="card-text">Dihari pertama siswa/i SMK Pesat antusias mengikuti berbagai materi dan ujian...</p>
-                <a href="#" class="btn btn-primary">Baca selengkapnya</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 25rem;">
-              <img src="./img/kegiatan.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Malam bina dan takwa</h5>
-                <p class="card-text">Alhamdulillah jumat kemarin SMK Pesat telah melaksanakan kegiatan Mabit...</p>
-                <a href="#" class="btn btn-primary">Baca selengkapnya</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 25rem;">
-              <img src="./img/kegiatan-parentinh.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Parenting session</h5>
-                <p class="card-text">Kegiatan parenting bersama menumbuhkan rasa cinta dan apresiasi lebih terhadap... </p>
-                <a href="#" class="btn btn-primary">Baca selengkapnya</a>
-              </div>
-            </div>
-          </div>
+        <div class="col-md-6 hero-image rounded">
+          <img src="./img/kegiatan-parentinh.jpg" alt="image" class="img-fluid" width="90%">
         </div>
       </div>
     </div>
 
     <br><br><br>
-    <!-- galeri -->
-     <div class="container text-center mt-5">
-      <h1>Galeri SMK informatika pesat</h1>
-      <p>Belajar di sekolah beda, hasilnya luar biasa</p>
-      <div class="container text-center mt-5">
-        <div class="row align-items-start">
-          <div class="col">
-            <img src="./img/galeri2.jpg" alt="">
+    <div class="container mt-5">
+      <h1 class="text-center">Tabel informasi SMK informatika pesat</h1>
+      <p></p>
+      <table class="table mt-5 text-center border">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Informasi</th>
+            <th scope="col">Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>NPSN</td>
+            <td>20267664</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>SK Pendirian Sekolah</td>
+            <td>421.5/83-Disdikpor</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Status Kepemilikan</td>
+            <td>Yayasan</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Bentuk Pendidikan</td>
+            <td>SMK</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Kepala sekolah</td>
+            <td>Adhi rachmat saputra</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>Akreditasi</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>SK Izin Operasional</td>
+            <td>451.42/05.BPPTPM.V/2013</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>Tanggal SK Izin Operasional</td>
+            <td>2013-05-17</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1>Pencapaian kami</h1>
+          <p class="lh-base">Pencapaian bukan akhir dari perjalanan, tapi awal dari <br>tantangan yang lebih besar.</p>
+          
+          <div class="progress mt-4" role="progressbar" aria-label="Wirausaha" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 25%">Wirausaha</div>
           </div>
-          <div class="col">
-            <img src="./img/galeri.jpg" alt="">
+          
+          <div class="progress mt-4" role="progressbar" aria-label="Kuliah" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 50%">Kuliah</div>
+          </div>
+          
+          <div class="progress mt-4" role="progressbar" aria-label="Bekerja" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 75%">Bekerja</div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="row text-center counter-section">
+            <div class="col-6 mb-4">
+              <div class="counter-box">
+                <div class="counter-value text-warning" data-count="459">0</div>
+                <div class="counter-title">Wirausaha</div>
+              </div>
+            </div>
+            
+            <div class="col-6 mb-4">
+              <div class="counter-box">
+                <div class="counter-value" data-count="783">0</div>
+                <div class="counter-title">Kuliah</div>
+              </div>
+            </div>
+            
+            <div class="col-6 mb-4">
+              <div class="counter-box">
+                <div class="counter-value" data-count="1068">0</div>
+                <div class="counter-title">Bekerja</div>
+              </div>
+            </div>
+            
+            <div class="col-6 mb-4">
+              <div class="counter-box">
+                <div class="counter-value text-warning" data-count="145">0</div>
+                <div class="counter-title">Startup Founder</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="container text-center">
-        <div class="row align-items-start">
-          <div class="col">
-            <img src="./img/galeri3.jpg" alt="">
-          </div>
-          <div class="col">
-            <img src="./img/galeri4.jpg" alt="">
-          </div>
-        </div>
+    </div>
+
+    <div class="container-fluid container">
+      <div class="map-responsive">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.511860712817!2d106.76539617480644!3d-6.583111093410447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c4ff2d5ecf4b%3A0x9da488eab0064996!2sSMK%20informatika%20Pesat%20Kota%20Bogor!5e0!3m2!1sid!2sid!4v1744525709968!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="1300" height="600">
+        </iframe>
       </div>
-     </div>
+    </div>
+    
 
      <!-- footer -->
 <footer class="pt-5 pb-4 mt-5">
