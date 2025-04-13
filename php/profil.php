@@ -1,3 +1,7 @@
+<?php
+  include "config.php";
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,7 +10,7 @@
     <title>Profil | SMK PESAT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
     <!-- navbar -->
@@ -21,23 +25,23 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav fs-6">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Beranda</a>
+              <a class="nav-link" aria-current="page" href="../index.html">Beranda</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active fw-500" href="#">Profil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="ekskul.html">Ekstrakulikuler</a>
+              <a class="nav-link" href="../ekskul.html">Ekstrakulikuler</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="galeri.html">Galeri</a>
+              <a class="nav-link" href="../galeri.html">Galeri</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Pendaftaran</a>
             </li>
           </ul>
           <div class="ms-auto">
-            <button class="btn btn-outline-orange" type="button">Kontak kami</button>
+            <a href="https://api.whatsapp.com/send/?phone=6287711177442&text=Hallo%2C+saya+ingin+lebih+tahu+tentang+SMK+Pesat+IT+XPro&type=phone_number&app_absent=0"><button class="btn btn-outline-orange" type="button">Kontak kami</button></a>
           </div>
         </div>
       </div>
@@ -56,67 +60,50 @@
           </div>
         </div>
         <div class="col-md-6 hero-image rounded">
-          <img src="./img/kegiatan-parentinh.jpg" alt="image" class="img-fluid" width="90%">
+          <img src="../img/kegiatan-parentinh.jpg" alt="image" class="img-fluid" width="90%">
         </div>
       </div>
     </div>
 
     <br><br><br>
     <div class="container mt-5">
-      <h1 class="text-center">Tabel informasi SMK informatika pesat</h1>
-      <p></p>
-      <table class="table mt-5 text-center border">
-        <thead>
-          <tr>
-            <th scope="col">No</th>
-            <th scope="col">Informasi</th>
-            <th scope="col">Detail</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>NPSN</td>
-            <td>20267664</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>SK Pendirian Sekolah</td>
-            <td>421.5/83-Disdikpor</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Status Kepemilikan</td>
-            <td>Yayasan</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Bentuk Pendidikan</td>
-            <td>SMK</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>Kepala sekolah</td>
-            <td>Adhi rachmat saputra</td>
-          </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td>Akreditasi</td>
-            <td>A</td>
-          </tr>
-          <tr>
-            <th scope="row">7</th>
-            <td>SK Izin Operasional</td>
-            <td>451.42/05.BPPTPM.V/2013</td>
-          </tr>
-          <tr>
-            <th scope="row">8</th>
-            <td>Tanggal SK Izin Operasional</td>
-            <td>2013-05-17</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <div class="container mt-5">
+    <h1 class="text-center">Tabel informasi SMK informatika pesat</h1>
+    <p></p>
+    
+    <?php
+      $sql = "SELECT * FROM informasi";
+      $query = mysqli_query($koneksi, $sql);
+      if(mysqli_num_rows($query) > 0) {
+          echo '<table class="table border text-center">';
+          echo '<thead>';
+          echo '<tr>';
+          echo '<th scope="col">No</th>';
+          echo '<th scope="col">Informasi</th>';
+          echo '<th scope="col">Detail</th>';
+          echo '</tr>';
+          echo '</thead>';
+          echo '<tbody>';
+          
+          $no = 1;
+          while($data = mysqli_fetch_array($query)){
+              echo "<tr>";
+              echo "<td>".$no++."</td>";
+              echo "<td>".$data['informasi']."</td>";
+              echo "<td>".$data['detail']."</td>";
+              echo "</tr>";
+          }
+          
+          echo '</tbody>';
+          echo '</table>';
+      } else {
+          echo '<div class="alert alert-info text-center">Belum ada informasi</div>';
+      }
+    ?>
+</div>
+
+</div>
+
 
     <br>
     <div class="container" id="tentangkami">
@@ -269,6 +256,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
