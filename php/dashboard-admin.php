@@ -1,12 +1,11 @@
 <?php
-session_start();
-if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    header("Location: login.php");
-    exit;
-}
-
-$username = $_SESSION['username'] ?? 'Admin';
-$active_page = 'dashboard';
+    session_start();
+    if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+        header("Location: login.php");
+        exit;
+    }
+    $username = $_SESSION['username'] ?? 'Admin';
+    $active_page = 'dashboard';
 ?>
 
 <!DOCTYPE html>
@@ -27,13 +26,13 @@ $active_page = 'dashboard';
             </div>
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a href="dashboard.php" class="sidebar-link <?php echo $active_page == 'dashboard' ? 'active' : ''; ?>">
-                        <i class="bi bi-speedometer2"></i> Dashboard
+                    <a href="#" class="sidebar-link <?php echo $active_page == 'dashboard' ? 'active' : ''; ?>">
+                        <i class="bi bi-speedometer2"></i> Beranda
                     </a>
                 </li>
                 <li class="nav-item text-white">
                     <a href="table-admin.php" class="sidebar-link <?php echo $active_page == 'table' ? 'active' : ''; ?>">
-                        <i class="bi bi-table"></i> Table
+                        <i class="bi bi-table"></i> Tabel informasi
                     </a>
                 </li>
             </ul>
@@ -47,11 +46,8 @@ $active_page = 'dashboard';
         <div class="main-content">
             <nav class="navbar navbar-expand-lg navbar-light mb-4">
                 <div class="container-fluid">
-                    <button class="btn" id="sidebar-toggle">
-                        <i class="bi bi-list"></i>
-                    </button>
                     <div class="ms-auto">
-                        <span class="me-2">Welcome, <?php echo htmlspecialchars($username); ?></span>
+                        <span class="me-2">Selamat datang, <?php echo htmlspecialchars($username); ?></span>
                     </div>
                 </div>
             </nav>
@@ -61,10 +57,10 @@ $active_page = 'dashboard';
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header bg-primary text-white">
-                                <h5 class="card-title">Dashboard</h5>
+                                <h5 class="card-title">Beranda</h5>
                             </div>
                             <div class="card-body">
-                                <h2>Selamat datang di dashboard admin SMK pesat!</h2>
+                                <h2>Selamat datang di beranda admin SMK pesat!</h2>
                                 <p>Semua informasi penting mengenai data pokok sekolah dapat diakses di sini.</p>
                             </div>
                         </div>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pendaftaran | SMK PESAT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container position-relative">
+        <a class="navbar-brand" href="#">
+          <img src="https://tesis.sekolah-pesat.com/assets/images/logo-smk-pesat.png" alt="Bootstrap" width="80" height="60">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav fs-6">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./php/profil.php">Profil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ekskul.html">Ekstrakulikuler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeri.html">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-500" href="#">Pendaftaran</a>
+            </li>
+          </ul>
+          <div class="ms-auto">
+            <a href="https://api.whatsapp.com/send/?phone=6287711177442&text=Hallo%2C+saya+ingin+lebih+tahu+tentang+SMK+Pesat+IT+XPro&type=phone_number&app_absent=0"><button class="btn btn-outline-orange" type="button">Kontak kami</button></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+        
+    <!-- hero -->
+     <br><br><br>
+    <div class="container mt-5">
+      <div class="row align-items-center hero-section">
+        <div class="col-md-6 hero-image mt-4">
+            <img src="./img/galeri4.jpg" alt="image" class="img-fluid" width="90%">
+          </div>
+        <div class="col-md-6 hero-content">
+          <p class="text-primary fw-medium">PENDAFTARAN</p>
+          <h1 class="fs-1 lh-base">Pendidikan terbaik dimulai dari keputusan bijak hari ini.</h1>
+          <p class="lh-small mt-3 text-justify">Pendidikan bukan sekadar proses belajar, tapi investasi jangka panjang untuk masa depan anak. Dengan memilih sekolah yang tepat, Anda telah mengambil langkah awal menuju kesuksesan mereka. Mari bergabung dan wujudkan masa depan yang gemilang bersama kami.</p>
+          <div class="d-flex gap-2 mt-4">
+            <a href="#"><button class="btn btn-primary" type="button">Pelajari lebih lanjut</button></a>
+            <a href="#form"><button class="btn btn-outline-orange" type="button">Daftar Sekarang</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Form Pendaftaran -->
+ <br><br>
+ <section class="form-pendaftaran py-5" id="form">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="card shadow border-0 rounded-4">
+            <div class="card-body p-5">
+              <h3 class="text-center mb-4 fw-semibold">Formulir Pendaftaran</h3>
+              <form>
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="namaLengkap" class="form-label">Nama Lengkap</label>
+                      <input type="text" class="form-control" id="namaLengkap" placeholder="Ariva Zweena" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="nisn" class="form-label">NISN</label>
+                      <input type="text" class="form-control" id="nisn" placeholder="002123454678" required>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="abc@gmail.com" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="noHp" class="form-label">Nomor HP</label>
+                      <input type="tel" class="form-control" id="noHp" placeholder="0895-123-4567" required>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="mb-3">
+                  <label for="asalSekolah" class="form-label">Asal Sekolah</label>
+                  <input type="text" class="form-control" id="asalSekolah" placeholder="SMPIT Al - yasmin 2 Bogor" required>
+                </div>
+  
+                <div class="mb-4">
+                  <label for="jurusan" class="form-label">Jurusan yang Diminati</label>
+                  <select class="form-select" id="jurusan" required>
+                    <option value="" selected disabled>Pilih Jurusan</option>
+                    <option value="rpl">Rekayasa Perangkat Lunak</option>
+                    <option value="tkj">Teknik Komputer & Jaringan</option>
+                    <option value="dkv">Desain Komunikasi Visual</option>
+                  </select>
+                </div>
+  
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary px-5 py-2 rounded-pill">Kirim Pendaftaran</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+     <!-- footer -->
+<footer class="pt-5 pb-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <img src="https://tesis.sekolah-pesat.com/assets/images/logo-smk-pesat.png" alt="SMK Pesat Logo" width="120" class="mb-3">
+        <p class="mb-3">SMK Pesat IT XPRO - Mencetak generasi yang religius, expert, dan professional di bidang teknologi informasi.</p>
+        <div class="d-flex gap-3 mt-4">
+          <a href="#" class="">
+            <i class="bi bi-facebook fs-5"></i>
+          </a>
+          <a href="#" class="">
+            <i class="bi bi-instagram fs-5"></i>
+          </a>
+          <a href="#" class="">
+            <i class="bi bi-youtube fs-5"></i>
+          </a>
+          <a href="#" class="">
+            <i class="bi bi-twitter-x fs-5"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-2 mb-4">
+        <h5 class="mb-4 fw-bold">Tautan Cepat</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="index.html" class="text-decoration-none text-black">Beranda</a></li>
+          <li class="mb-2"><a href="profil.html" class="text-decoration-none text-black">Profil</a></li>
+          <li class="mb-2"><a href="ekskul.html" class="text-decoration-none text-black">Ekstrakulikuler</a></li>
+          <li class="mb-2"><a href="#" class="text-decoration-none text-black">Galeri</a></li>
+          <li class="mb-2"><a href="#" class="text-decoration-none text-black">Pendaftaran</a></li>
+        </ul>
+      </div>
+
+      <!-- Program Keahlian -->
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-4 fw-bold">Program Keahlian</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#" class="text-decoration-none text-black">Rekayasa Perangkat Lunak</a></li>
+          <li class="mb-2"><a href="#" class="text-decoration-none text-black">Desain Komunikasi Visual</a></li>
+          <li class="mb-2"><a href="#" class="text-decoration-none text-black">Teknik Komputer & Jaringan</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-4 fw-bold">Kontak Kami</h5>
+        <ul class="list-unstyled">
+          <li class="mb-3 d-flex align-items-start">
+            <i class="bi bi-geo-alt-fill me-2 mt-1"></i>
+            <span>Jl. Raya Bogor KM 28, Pekayon, Pasar Rebo, Jakarta Timur</span>
+          </li>
+          <li class="mb-3 d-flex align-items-center">
+            <i class="bi bi-telephone-fill me-2"></i>
+            <span>(021) 8778-9000</span>
+          </li>
+          <li class="mb-3 d-flex align-items-center">
+            <i class="bi bi-envelope-fill me-2"></i>
+            <span>info@smkpesat.sch.id</span>
+          </li>
+          <li class="d-flex align-items-center">
+            <i class="bi bi-clock-fill me-2"></i>
+            <span>Senin - Jumat: 07.00 - 16.00</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="mt-4">
+
+    <!-- Copyright -->
+    <div class="row">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="mb-0">© 2024 SMK Pesat IT XPRO. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <p class="mb-0">
+          <a href="#" class="text-decoration-none me-3">Kebijakan Privasi</a>
+          <a href="#" class="text-warning">Syarat & Ketentuan</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

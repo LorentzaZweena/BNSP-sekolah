@@ -37,7 +37,7 @@
               <a class="nav-link" href="../galeri.html">Galeri</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pendaftaran</a>
+              <a class="nav-link" href="../pendaftaran.html">Pendaftaran</a>
             </li>
           </ul>
           <div class="ms-auto">
@@ -56,7 +56,7 @@
           <p class="lh-small mt-3 text-justify">Dengan fokus pada keterampilan praktis dan inovasi, kami membekali siswa dengan pengalaman belajar yang relevan di bidang teknologi informasi, desain komunikasi visual, serta kompetensi lainnya.</p>
           <div class="d-flex gap-2 mt-4">
             <a href="#tentangkami"><button class="btn btn-primary" type="button">Pelajari lebih lanjut</button></a>
-            <button class="btn btn-outline-orange" type="button">Daftar Sekarang</button>
+            <a href="pendaftaran.html"><button class="btn btn-outline-orange" type="button">Daftar Sekarang</button></a>
           </div>
         </div>
         <div class="col-md-6 hero-image rounded">
@@ -81,6 +81,7 @@
           echo '<th scope="col">No</th>';
           echo '<th scope="col">Informasi</th>';
           echo '<th scope="col">Detail</th>';
+          echo '<th scope="col">Foto</th>';
           echo '</tr>';
           echo '</thead>';
           echo '<tbody>';
@@ -91,6 +92,7 @@
               echo "<td>".$no++."</td>";
               echo "<td>".$data['informasi']."</td>";
               echo "<td>".$data['detail']."</td>";
+              echo '<td><img src="../img/' . htmlspecialchars($data['foto']) . '" alt="Foto" style="max-width: 100px; max-height: 100px;"></td>';
               echo "</tr>";
           }
           

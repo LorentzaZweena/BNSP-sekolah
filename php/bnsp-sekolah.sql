@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 13, 2025 at 02:25 PM
+-- Generation Time: Apr 14, 2025 at 08:22 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -30,8 +30,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `informasi` (
   `id` int(11) NOT NULL,
   `informasi` varchar(50) NOT NULL,
-  `detail` varchar(60) NOT NULL
+  `detail` varchar(60) NOT NULL,
+  `foto` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `informasi`
+--
+
+INSERT INTO `informasi` (`id`, `informasi`, `detail`, `foto`) VALUES
+(5, 'tes 3', 'lorem dolor sit amet', 'smkpesat.jpg'),
+(8, 'Hello dunia', 'lorem ipsum', 'experimen.jpg'),
+(12, 'tes 10', 'lorem ipsum dolor sit amet', '../img/67fca64aa3d8d-download (2).jpeg');
 
 -- --------------------------------------------------------
 
@@ -71,6 +81,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `informasi`
+--
+ALTER TABLE `informasi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `users`

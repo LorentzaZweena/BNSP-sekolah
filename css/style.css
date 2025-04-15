@@ -179,3 +179,17 @@
   }
 }
 
+.form-pendaftaran .form-control,
+.form-pendaftaran .form-select {
+  border-radius: 0.5rem;
+}
+
+.form-pendaftaran label {
+  font-weight: 500;
+}
+
+.form-pendaftaran .card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+

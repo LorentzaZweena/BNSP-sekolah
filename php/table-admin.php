@@ -8,7 +8,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 }
 
 $username = $_SESSION['username'] ?? 'Admin';
-$active_page = 'table';
+$active_page = 'table-admin';
 
 $sql = "SELECT * FROM informasi";
 $query = mysqli_query($koneksi, $sql);
@@ -34,12 +34,12 @@ $has_data = mysqli_num_rows($query) > 0;
             <ul class="nav flex-column">
                 <li class="nav-item">
                     <a href="dashboard-admin.php" class="sidebar-link <?php echo $active_page == 'dashboard' ? 'active' : ''; ?>">
-                        <i class="bi bi-speedometer2"></i> Dashboard
+                        <i class="bi bi-speedometer2"></i> Beranda
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="table.php" class="sidebar-link <?php echo $active_page == 'table' ? 'active' : ''; ?>">
-                        <i class="bi bi-table"></i> Table
+                    <a href="#" class="sidebar-link <?php echo $active_page == 'table' ? 'active' : ''; ?>">
+                        <i class="bi bi-table"></i> Tabel informasi
                     </a>
                 </li>
             </ul>
@@ -54,11 +54,8 @@ $has_data = mysqli_num_rows($query) > 0;
             <nav class="navbar navbar-expand-lg navbar-light mb-4">
                 <div class="container-fluid">
                     <button class="btn" id="sidebar-toggle">
-                        <i class="bi bi-list"></i>
+                        <!-- <i class="bi bi-list"></i> -->
                     </button>
-                    <div class="ms-auto">
-                        <span class="me-2">Welcome, <?php echo htmlspecialchars($username); ?></span>
-                    </div>
                 </div>
             </nav>
 
@@ -67,37 +64,43 @@ $has_data = mysqli_num_rows($query) > 0;
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header d-flex justify-content-between align-items-center bg-primary text-white">
-                                <h5 class="card-title mb-0">Data Table</h5>
-                                <a href="add_data.php" class="btn btn-warning btn-sm">
-                                    <i class="bi bi-plus"></i> Add New
+                                <h5 class="card-title mb-0">Tabel informasi sekolah SMK PESAT</h5>
+                                <a href="add.php" class="btn btn-warning btn-sm">
+                                    <i class="bi bi-plus"></i> Tambah Data
+                                    <!-- <img src="../img/dkv.jpg" alt=""> -->
                                 </a>
                             </div>
                             <div class="card-body">
                                 <?php if($has_data): ?>
-                                <div class="table-responsive">
+                                <div class="table-responsive text-center">
                                     <table class="table table-striped table-hover">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
                                                 <th>Informasi</th>
                                                 <th>Detail</th>
+                                                <th>Foto</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php 
-                                            $no = 1;
-                                            while($data = mysqli_fetch_array($query)): 
+                                                $no = 1;
+                                                while($data = mysqli_fetch_array($query)): 
                                             ?>
                                             <tr>
-                                                <td><?php echo $no++; ?></td>
-                                                <td><?php echo htmlspecialchars($data['informasi']); ?></td>
-                                                <td><?php echo htmlspecialchars($data['detail']); ?></td>
+                                                <td><?= $no++; ?></td>
+                                                <td><?= htmlspecialchars($data['informasi']); ?></td>
+                                                <td><?= htmlspecialchars($data['detail']); ?></td>
+                                                <td>
+                                                    <img src="../img/<?= htmlspecialchars($data['foto']); ?>" alt="Foto" style="max-width: 100px; max-height: 100px;">
+                                                </td>
+
                                                 <td>
                                                     <a href="edit.php?id=<?php echo $data['id']; ?>" class="btn btn-sm btn-warning">
                                                         <i class="bi bi-pencil"></i>
                                                     </a>
-                                                    <a href="delete.php?id=<?php echo $data['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">
+                                                    <a href="delete.php?id=<?php echo $data['id']; ?>" class="btn btn-sm btn-danger">
                                                         <i class="bi bi-trash"></i>
                                                     </a>
                                                 </td>
@@ -118,13 +121,7 @@ $has_data = mysqli_num_rows($query) > 0;
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById('sidebar-toggle').addEventListener('click', function() {
-            document.querySelector('.sidebar').classList.toggle('active');
-        });
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
